@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package goblin;
+
+import "google/api/annotations.proto";
+
+message Ping {
+  string text = 1;
+}
+
+message Pong {
+  string text = 1;
+}
+
+service PingService {
+  rpc ping(Ping) returns (Pong) {
+    option (google.api.http) = {
+      get: "/api/v1/ping"
+      body: "*"
+    };
+  }
+}
