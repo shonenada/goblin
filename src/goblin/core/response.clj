@@ -1,4 +1,4 @@
-(ns goblin.utils.response
+(ns goblin.core.response
   (:require [clojure.data.json :as json]))
 
 (defn json-response

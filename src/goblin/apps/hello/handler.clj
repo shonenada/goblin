@@ -1,6 +1,8 @@
 (ns goblin.apps.hello.handler
-  (:require [goblin.utils.response :refer [json-response]]))
+  (:require [goblin.core
+             [handler :refer [defhandler]]
+             [response :refer [json-response]]]))
 
-(defn index
-  [request]
+(defhandler index
+  [context]
   (json-response {:message "Hello Goblin"}))

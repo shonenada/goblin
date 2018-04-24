@@ -1,7 +1,9 @@
 (ns goblin.apps.echo.handler
-  (:require [goblin.utils.response :refer [json-response]]))
+  (:require [goblin.core
+             [handler :refer [defhandler]]
+             [response :refer [json-response]]]))
 
-(defn echo
-  [request]
-  (let [echo (get-in request [:params :echo])]
+(defhandler echo
+  [context]
+  (let [echo (get-in context [:params :echo])]
     (json-response {:message echo})))

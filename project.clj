@@ -8,5 +8,6 @@
 
                  [ring/ring-core "1.2.2"]
                  [ring/ring-jetty-adapter "1.2.2"]
+                 [prismatic/schema "1.1.3"]
                  [compojure "1.5.1"]]
   :main ^:skip-aot goblin.core)
